@@ -16,6 +16,8 @@ import { TrustProxyPlugin } from './plugins/trust-proxy.plugin';
 const IS_DEV = process.env.APP_ENV === 'dev';
 const serverPort = +process.env.PORT || 3000;
 
+(IS_DEV ? console.log('Running in development mode') : console.log('Running in production mode'));
+
 export const config: VendureConfig = {
     apiOptions: {
         port: 3000,
