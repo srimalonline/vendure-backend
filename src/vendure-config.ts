@@ -16,8 +16,6 @@ import { TrustProxyPlugin } from './plugins/trust-proxy.plugin';
 const IS_DEV = process.env.APP_ENV === 'dev';
 const serverPort = +process.env.PORT || 3000;
 
-(IS_DEV ? console.log('Running in development mode') : console.log('Running in production mode'));
-
 export const config: VendureConfig = {
     apiOptions: {
         port: 3000,
@@ -77,7 +75,7 @@ export const config: VendureConfig = {
             // For local dev, the correct value for assetUrlPrefix should
             // be guessed correctly, but for production it will usually need
             // to be set manually to match your production url.
-            assetUrlPrefix: IS_DEV ? undefined : 'https://www.my-shop.com/assets/',
+            assetUrlPrefix: IS_DEV ? undefined : 'https://ioskgkw8sw4og4800owko40w.coolify.flico.lk/assets/',
         }),
         DefaultSchedulerPlugin.init(),
         DefaultJobQueuePlugin.init({ useDatabaseForBuffer: true }),
@@ -101,7 +99,8 @@ export const config: VendureConfig = {
             route: 'admin',
             port: serverPort + 2,
             adminUiConfig: {
-                apiPort: serverPort,
+                apiHost: 'https://ioskgkw8sw4og4800owko40w.coolify.flico.lk',
+                apiPort: undefined,
             },
         }),
     ],

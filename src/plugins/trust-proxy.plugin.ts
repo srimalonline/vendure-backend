@@ -8,6 +8,5 @@ export class TrustProxyPlugin {
   static async onVendureBootstrap(app: INestApplication): Promise<void> {
     const expressApp = app.getHttpAdapter().getInstance();
     expressApp.set('trust proxy', true);
-    console.log('[TrustProxyPlugin] Express trust proxy enabled');
   }
 }
