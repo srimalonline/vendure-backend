@@ -21,6 +21,13 @@ export const config: VendureConfig = {
         port: serverPort,
         adminApiPath: 'admin-api',
         shopApiPath: 'shop-api',
+        hostname:'0.0.0.0',
+        shopApiPlayground:{
+            endpoint: '/shop-api',
+        },
+        adminApiPlayground: {
+            endpoint: '/admin-api',
+        },
         // The following options are useful in development mode,
         // but are best turned off for production for security
         // reasons.
