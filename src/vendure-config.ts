@@ -18,7 +18,7 @@ const serverPort = +process.env.PORT || 3000;
 
 export const config: VendureConfig = {
     apiOptions: {
-        port: serverPort,
+        port: 80,
         adminApiPath: 'admin-api',
         shopApiPath: 'shop-api',
         hostname:'0.0.0.0',
