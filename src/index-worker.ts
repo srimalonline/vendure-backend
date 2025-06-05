@@ -6,3 +6,7 @@ bootstrapWorker(config)
     .catch(err => {
         console.log(err);
     });
+
+if (typeof global.crypto === 'undefined') {
+  global.crypto = require('crypto');
+}
